@@ -1,0 +1,6 @@
+{
+  "name": "M.S. Smile Fit – Dental & Physiotherapy Clinic",
+  "description": "Premium Dental and Physiotherapy care clinic in George Town, Chennai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

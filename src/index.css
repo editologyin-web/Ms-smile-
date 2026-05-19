@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-medical-primary: #0F172A;
+  --color-medical-accent: #14B8A6;
+  --color-medical-luxury: #C5A059;
+  --color-medical-bg: #FDFCF7;
+  
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --shadow-premium: 0 20px 50px -12px rgba(15, 23, 42, 0.1);
+  --shadow-glow: 0 0 30px rgba(20, 184, 166, 0.2);
+}
+
+@layer base {
+  :root {
+    --bg: #FDFCF7;
+    --text: #0F172A;
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --border: rgba(15, 23, 42, 0.05);
+  }
+
+  .dark {
+    --bg: #0A0A0A;
+    --text: #FDFCF7;
+    --card-bg: rgba(15, 23, 42, 0.7);
+    --border: rgba(255, 255, 255, 0.05);
+  }
+
+  body {
+    @apply bg-[var(--bg)] text-[var(--text)] antialiased transition-colors duration-500;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-[var(--text)];
+  }
+}
+
+.glass-card {
+  @apply bg-[var(--card-bg)] backdrop-blur-xl border border-[var(--border)] rounded-3xl shadow-premium transition-all duration-500 hover:shadow-glow;
+}
+
+.medical-gradient {
+  background: linear-gradient(135deg, #0F172A, #1E293B);
+}
+
+.accent-gradient {
+  background: linear-gradient(135deg, #14B8A6, #0D9488);
+}
+
+.btn-premium {
+  @apply bg-medical-primary text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-medical-accent shadow-xl hover:-translate-y-1 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-medical-primary text-medical-primary px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:bg-medical-primary hover:text-white;
+}
+
+.section-spacing {
+  @apply py-32 px-6 max-w-7xl mx-auto;
+}
+
+.text-gold {
+  @apply text-medical-luxury;
+}
+
+.reveal-text {
+  @apply overflow-hidden;
+}
